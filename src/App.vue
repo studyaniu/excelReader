@@ -62,7 +62,7 @@ export default {
   methods: {
     handleExcelFile() {
       // 读取Excel文件
-      axios.get('/excelReader/front-end-dynamic-table.xlsx', { responseType: 'arraybuffer' })
+      axios.get('/front-end-dynamic-table.xlsx', { responseType: 'arraybuffer' })
         .then((response) => {
           const data = response.data;
           const workbook = XLSX.read(data, { type: 'array' });
